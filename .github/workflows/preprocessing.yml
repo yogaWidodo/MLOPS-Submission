@@ -19,7 +19,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.11.5'
+        python-version: '3.8'
 
     - name: Install dependencies
       run: |
@@ -29,6 +29,9 @@ jobs:
     - name: Run preprocessing script
       run: |
         python run_preprocessing.py
+
+    - name: List files in workspace for debugging
+      run: ls -l
 
     - name: Upload processed dataset artifact
       uses: actions/upload-artifact@v3
