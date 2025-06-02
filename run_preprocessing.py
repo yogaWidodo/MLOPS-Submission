@@ -14,14 +14,14 @@ spec.loader.exec_module(automate_module)
 
 def main():
     # Load the raw dataset
-    raw_data_path = "preprocessing\Gold Price (2013-2023).csv"
+    raw_data_path = "preprocessing/Gold Price (2013-2023).csv"
     df = pd.read_csv(raw_data_path)
 
     # Apply preprocessing
     processed_df = automate_module.transform_gold_data(df)
 
     # Save the processed dataset
-    processed_data_path = "preprocessing\processed_gold_price.csv"
+    processed_data_path = "preprocessing/processed_gold_price.csv"
     processed_df.to_csv(processed_data_path, index=False)
     print(f"Processed dataset saved to {processed_data_path}")
 

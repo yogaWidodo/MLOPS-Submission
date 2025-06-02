@@ -34,7 +34,7 @@ jobs:
       run: ls -l
 
     - name: Upload processed dataset artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3.1.2
       with:
         name: processed-dataset
         path: ./preprocessing/processed_gold_price.csv
