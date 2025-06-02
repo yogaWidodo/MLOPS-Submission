@@ -1,0 +1,17 @@
+name: mlops-env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip
+  - pandas
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - plotly
+  - tensorflow
+  - keras
+  - mlflow
+  - pip:
+      - mlflow
