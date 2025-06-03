@@ -4,7 +4,7 @@ import sys
 
 # Load the module from the filename with spaces
 module_name = "automate_script"
-file_path = "automate_Yoga Sulistiyo Widodo.py"
+file_path = "preprocessing/automate_Yoga.py"
 spec = importlib.util.spec_from_file_location(module_name, file_path)
 if spec is None or spec.loader is None:
     raise ImportError(f"Cannot load module {module_name} from {file_path}")
