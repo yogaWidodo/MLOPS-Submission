@@ -2,11 +2,9 @@ name: Preprocessing Workflow
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   preprocess:
@@ -27,17 +25,10 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run preprocessing script
-      run: |
-        python run_preprocessing.py
-
-    - name: List files in preprocessing directory for debugging
-      run: ls -l preprocessing
-
-    - name: List files in workspace for debugging
-      run: ls -l
+      run: python run_preprocessing.py
 
     - name: Upload processed dataset artifact
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-artifact@v3
       with:
         name: processed-dataset
         path: preprocessing/processed_gold_price.csv
